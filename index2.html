@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v6.js"></script>>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap');
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #FFFFF0;
+            display: inline;
+        }
+
+        .condition {
+            width: 200px;
+            height: 35px;
+            border-radius: 20px;
+            border-color: #322b70;
+            background-color: transparent;
+            border-width: 2px;
+            border-style: solid;
+            font-size: 15px;
+            color: #322b70;
+        }
+
+        #canvas {
+            background-size: cover;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .container {
+            display: box;
+        }
+
+        .menu {
+            width: 25%;
+            padding: 10px;
+            height: "546";
+            display: table-cell;
+            float: left;
+            margin: auto;
+            text-shadow: 1px 1px 0 #A8A8A8;
+            background-color: #c3bcdb;
+            align-items: center;
+        }
+
+
+        .main {
+            width: 75%;
+            display: table-cell;
+            float: left;
+        }
+
+        * {
+            font-family: "Comic Sans MS", sans-serif;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+
+        #header {
+            font-size: 3.0em;
+            color: #f5f0f0;
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            background-color: #313175;
+            border-bottom: 1px dotted #CCCCCC;
+        }
+
+        #subheader {
+            font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+            font-size: 1.0em;
+            background-color: #606096;
+            color: #cccccc;
+            text-align: center;
+            padding: 10px 0px 10px 0px;
+        }
+
+
+
+        #add-item-input {
+            flex: 3 0;
+        }
+
+        #add-item-button {
+            flex: 1 0;
+        }
+
+        #input-item {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: 1px dotted #4682b4;
+            font-size: 16pt;
+        }
+
+
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: left;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+        <div id="container">
+            <div id="head">
+                <div id="header">Welcome Page</div>
+                <div id="subheader">Udentity</div>
+                </audio>
+            </div>
+            <div class="menu" id="registeration">
+            </div>
+            <div class="main">
+            <h2>Hello, </h2>
+            <span id="replacer">???</span>
+            </div>
+
+        </div>
+</body>
+
+<script>
+    var url = window.location.search;
+    console.log(url);
+
+    var realName1 = url.split(/[=&]/);
+    console.log(realName1[1]);
+
+    d3.select("#replacer").html(realName1[1]);
+
+</script>
+
+</html>
